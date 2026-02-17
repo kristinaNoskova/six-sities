@@ -3,6 +3,7 @@ import Header from '../../components/header/header';
 import LocationsTabs from '../../components/locations-tabs/locations-tabs';
 import PlacesFound from '../../components/places-found/places-found';
 import Map from '../../components/map/map';
+import { MOCKS } from '../../mocks/mocks';
 
 type MainProps = {
   offerCount: number;
@@ -50,11 +51,9 @@ function Main({ offerCount }: MainProps): JSX.Element {
                 </ul>
               </form>
               <div className="cities__places-list places__list tabs__content">
-                <PlaceCard />
-                <PlaceCard />
-                <PlaceCard />
-                <PlaceCard />
-                <PlaceCard />
+                {MOCKS.map((offer) => (
+                  <PlaceCard key={offer.id} offer={offer} />
+                ))}
               </div>
             </section>
             <div className="cities__right-section">
