@@ -1,14 +1,14 @@
 export const Setting = {
   OfferCount: 315,
-};
+} as const;
 
 export const CITIES = [
-  { city: 'Paris', isActive: false },
-  { city: 'Cologne', isActive: false },
-  { city: 'Brussels', isActive: false },
-  { city: 'Amsterdam', isActive: true },
-  { city: 'Hamburg', isActive: false },
-  { city: 'Dusseldorf', isActive: false },
+  'Paris',
+  'Cologne',
+  'Brussels',
+  'Amsterdam',
+  'Hamburg',
+  'Dusseldorf',
 ];
 
 export const CARD_IMAGE_SIZE = {
@@ -16,6 +16,13 @@ export const CARD_IMAGE_SIZE = {
   CITIES_HEIGHT: 200,
   FAVORITES_WIDTH: 150,
   FAVORITES_HEIGHT: 110,
-  NEAR_PLACES_WIDTH: 260,
-  NEAR_PLACES_HEIGHT: 200,
+} as const;
+
+export const MAX_RATING = 5;
+
+export const SORTING_OPTIONS = {
+  POPULAR: 'Popular',
+  PRICE_LOW_TO_HIGH: 'Price: low to high',
+  PRICE_HIGH_TO_LOW: 'Price: high to low',
+  TOP_RATED: 'Top rated first',
 } as const;

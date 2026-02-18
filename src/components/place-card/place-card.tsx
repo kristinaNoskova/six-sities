@@ -1,4 +1,4 @@
-import { CARD_IMAGE_SIZE } from '../../const';
+import { CARD_IMAGE_SIZE, MAX_RATING } from '../../const';
 import { PlaceCardProps } from './place-card.types';
 
 function PlaceCard({
@@ -43,7 +43,9 @@ function PlaceCard({
         </div>
         <div className="place-card__rating rating">
           <div className="place-card__stars rating__stars">
-            <span style={{ width: `${(offer.rating / 5) * 100}%` }}></span>
+            <span
+              style={{ width: `${(offer.rating / MAX_RATING) * 100}%` }}
+            ></span>
             <span className="visually-hidden">Rating</span>
           </div>
         </div>
